@@ -11,6 +11,7 @@ S('button[type="submit"]')[0].addEventListener('click', (ev) => {
     
     // Save the values to local storage in an array
     let data = localStorage.getItem('blogstom');
+    console.log('post',data)
     if (data) {
         data = JSON.parse(data);
         data.push(values);

@@ -2,4 +2,14 @@
 
 .blog{
     padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.blog-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: rgb(168, 193, 214);
+    margin-bottom: 10px;
 }
