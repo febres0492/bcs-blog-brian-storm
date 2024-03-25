@@ -7,6 +7,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
+    min-height: 100vh;
 }
 
 /* style for responsivenes ---------------------------------------------------- */
@@ -23,13 +24,12 @@ body{
     flex-wrap: wrap;
 }
 
-[class*="col-"]{
+.col, [class*="col-"]{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex: 1;
     padding: 0 10px;
-    border: 1px solid #000000;
 }
 
 .col-md-6{
@@ -53,6 +53,9 @@ body{
 }
 .jcc{
     justify-content: center;
+}
+.jcsb{
+    justify-content: space-between;
 }
 .nowrap{
     flex-wrap: nowrap;
@@ -78,18 +81,44 @@ img{
 }
 
 .bdb{
-    border-bottom: 1px solid black;
+    border: 1px solid black;
 }
 .bdr{
-    border-bottom: 1px solid red;
+    border: 1px solid red;
 }
-
-
-
 
 /* header --------------------------------------------------------------------- */
 
 header{
+    padding: 10px 0;
+    border: 2px solid #000000;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer --------------------------------------------------------------------- */
+
+footer{
     padding: 10px 0;
     border: 2px solid #000000;
     padding: 15px;

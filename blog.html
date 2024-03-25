@@ -6,22 +6,34 @@
     <link rel="stylesheet" href="./assets/css/blog.css">
     <title>Document</title>
 </head>
-<body>
+<body class="df flex-column">
     <header>
-        <nav class="col">
+        <nav class="col jcsb">
             <h3>All Blogs</h3>
-            <button id="clearBtn">clear all</button>
+            <div>
+                <a class="btn" href="./index.html">Back</a>
+                <button id="clearBtn">clear all</button>
+            </div>
         </nav>
     </header>
-    <section>
+    <section class="fg">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col flex-column">
                     <h3>My First Blog</h3>
+                    <div id="blogContainer" class="df flex-column">
+                        <!-- blog container -->
+                        <div class="blog df flex-column bdb">
+                            <p>No blogs poasted yet</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="bdb">
+        <h2>footer</h2>
+    </footer>
 </body>
 <script src="./assets/js/blog.js"></script>
 </html>

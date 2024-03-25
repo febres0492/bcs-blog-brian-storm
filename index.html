@@ -8,11 +8,12 @@
 </head>
 <body>
     <header>
-        <nav class="col">
+        <nav class="col jcsb">
             <h3>My First Blog</h3>
+            <a class="btn" href="./blog.html">Blogs</a>
         </nav>
     </header>
-    <section class="bdr df full-height">
+    <section class="df full-height">
         <div class="container fg">
             <div class="row">
                 <div class="col-md-6">
@@ -21,9 +22,9 @@
                 <div class="col-md-6 flex-column">
                     <h1>What's on your mind?</h1>
                     <form class="df flex-column" action="blog.html" method="get">
-                        <input type="text" name="username" placeholder="Username" required>
-                        <input type="text" name="title" placeholder="Title" required>
-                        <textarea name="content" placeholder="Content" required></textarea>
+                        <input class="input" type="text" name="username" placeholder="Username" required value="name">
+                        <input class="input" type="text" name="title" placeholder="Title" required value="title">
+                        <textarea class="input" name="content" placeholder="Content" required value="message"></textarea>
                         <button type="submit">Submit</button>
                     </form>
                 </div>
