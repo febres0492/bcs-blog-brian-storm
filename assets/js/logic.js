@@ -6,12 +6,10 @@ S('button[type="submit"]')[0].addEventListener('click', (ev) => {
     // Get the values from the inputs
     const inputs = form.querySelectorAll('.input');
     const values = Array.from(inputs).map(input => input.value);
-    if(values.length !== 3) {return}
-    console.log(values)
+    if(values.some(v => v.length == 0)) {return}
     
     // Save the values to local storage in an array
     let data = localStorage.getItem('blogstom');
-    console.log('post',data)
     if (data) {
         data = JSON.parse(data);
         data.push(values);

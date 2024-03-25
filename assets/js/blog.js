@@ -1,10 +1,13 @@
 
 showBlogs();
 
-
 S('#clearBtn')[0].addEventListener('click', () => {
     localStorage.removeItem('blogstom');
-    showBlogs();
+    S('#blogContainer')[0].innerHTML = `
+        <div class="blog df flex-column bdb">
+            <p>No blogs poasted yet</p>
+        </div>
+    `
 });
 
 function S(selector) {
@@ -15,7 +18,6 @@ function showBlogs() {
     if (localStorage.getItem('blogstom')) {
         blogs = JSON.parse(localStorage.getItem('blogstom'));
     }
-    console.log('blogs',blogs)
     
     S('#blogContainer')[0].innerHTML = ''
 
