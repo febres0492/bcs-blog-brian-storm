@@ -12,7 +12,7 @@ body{
 /* style for responsivenes ---------------------------------------------------- */
 
 .container{
-    max-width: 1170px;
+    max-width: 1400px;
     overflow: hidden;
     padding: 0 20px;
     margin: auto;
@@ -63,7 +63,12 @@ body{
 .tac{
     text-align: center;
 }
-
+.full-height{
+    height: 100vh;
+}
+.fg{
+    flex-grow: 1;
+}
 
 /* global style --------------------------------------------------------------- */
 
@@ -72,6 +77,9 @@ img{
     height: auto;
 }
 
+.bdb{
+    border-bottom: 1px solid black;
+}
 .bdr{
     border-bottom: 1px solid red;
 }
@@ -83,7 +91,7 @@ img{
 
 header{
     padding: 10px 0;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
     padding: 15px;
 }
 
