@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>My First Blog</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="col">
+            <h3>My First Blog</h3>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://source.unsplash.com/400x300" alt="Random Image">
+                </div>
+                <div class="col-md-6 flex-column">
+                    <h1>What's on your mind?</h1>
+                    <form class="df flex-column" action="blog.php" method="post">
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="text" name="title" placeholder="Title">
+                        <textarea name="content" placeholder="Content"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
 </body>
 </html>
