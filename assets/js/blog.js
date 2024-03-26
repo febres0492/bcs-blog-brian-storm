@@ -3,7 +3,7 @@
 showBlogs();
 
 // showiing no blogs message
-S('#clearBtn')[0].addEventListener('click', () => {
+S('#deleteAllBtn')[0].addEventListener('click', () => {
     localStorage.removeItem('blogstom');
     showNoPostsMessage()
 });
@@ -23,8 +23,12 @@ function showBlogs() {
     // if there are no blogs
     if(blogs.length == 0) {
         showNoPostsMessage()
+        S('#deleteAllBtn')[0].classList.add('d-none');
         return
     }
+
+    // remove class d-none from deleteAllBtn
+    S('#deleteAllBtn')[0].classList.remove('d-none');
 
     // clearing the container
     S('#blogContainer')[0].innerHTML = '';
@@ -39,7 +43,7 @@ function showBlogs() {
             <div class="blog df flex-column">
                 <div class="df jcsb">
                     <h1 class="blog-title">${title} ${i}</h1>
-                    <button class="delete-btn" onclick="deleteBlog(${i})">Delete</button>
+                    <button class="btn" onclick="deleteBlog(${i})">Delete</button>
                 </div>
                 <hr>
                 <p class="blog-message">${content}</p>

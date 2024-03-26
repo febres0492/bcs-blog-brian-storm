@@ -1,0 +1,21 @@
+/* form.css */
+
+/* Apply general styles to the form */
+form {
+    
+}
+
+/* Style the form inputs */
+form input {
+    /* Add your styles here */
+}
+
+/* Style the form labels */
+form label {
+    /* Add your styles here */
+}
+
+/* Style the form submit button */
+form button[type="submit"] {
+    /* Add your styles here */
+}

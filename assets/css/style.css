@@ -2,6 +2,7 @@
 :root {
     --background-color: #fff;
     --text-color: #000;
+    --gap:10px;
 }
 
 /* dark theme */
@@ -23,13 +24,13 @@ body {
 
 body{
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 /* style for responsivenes ---------------------------------------------------- */
 
 .container{
-    max-width: 1400px;
+    max-width: 1200px;
     overflow: hidden;
     padding: 0 20px;
     margin: auto;
@@ -44,8 +45,10 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: var(--gap);
     flex: 1;
     padding: 0 10px;
+    width: 100%;
 }
 
 .col-md-6{
@@ -66,12 +69,16 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: var(--gap)
 }
 .jcc{
     justify-content: center;
 }
 .jcsb{
     justify-content: space-between;
+}
+.aic{
+    align-items: center;
 }
 .nowrap{
     flex-wrap: nowrap;
@@ -82,11 +89,17 @@ body{
 .tac{
     text-align: center;
 }
-.full-height{
-    height: 100vh;
-}
 .fg{
     flex-grow: 1;
+}
+
+
+/* other classes ------------------------------------------------------------- */
+.d-none{
+    display: none !important;
+}
+.mr-auto{
+    margin-right: auto;
 }
 
 /* global style --------------------------------------------------------------- */
@@ -115,6 +128,7 @@ img{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 14px;
 }
 
 .bdb{

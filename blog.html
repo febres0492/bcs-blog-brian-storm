@@ -11,11 +11,9 @@
     <!-- header -->
     <header>
         <nav class="col jcsb">
-            <h3>All Blogs</h3>
-            <div>
-                <a class="btn" href="./index.html">Back</a>
-                <button class="theme-toggle btn">Dark theme</button>
-            </div>
+            <h3 class="mr-auto">All Blogs</h3>
+            <a class="btn" href="./index.html">Back</a>
+            <button class="theme-toggle btn">Dark theme</button>
         </nav>
     </header>
 
@@ -25,8 +23,8 @@
             <div class="row">
                 <div class="col flex-column">
                     <div class="df jcsb">
-                        <h3>My First Blog</h3>
-                        <button id="clearBtn">Delete all</button>
+                        <h3>Blogs</h3>
+                        <button id="deleteAllBtn" class="btn d-none">Delete all</button>
                     </div>
                     <div id="blogContainer" class="df flex-column">
                         <!-- blog posts will be appended here -->
@@ -39,6 +37,7 @@
     <!-- footer -->
     <footer class="bdb">
         <h2>footer</h2>
+        <a href="https://github.com/febres0492/bcs-blog-brian-storm">github repo</a>
     </footer>
 </body>
 <script src="./assets/js/logic.js"></script>
