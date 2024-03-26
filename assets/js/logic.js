@@ -1,24 +1,39 @@
+
+// This file contains the logic for the blog page
 S('button[type="submit"]')[0].addEventListener('click', (ev) => {
-    
-    // Select the form
+
+    // selecting the form
     const form = S('form')[0];
     
-    // Get the values from the inputs
+    // Getting values from the inputs
     const inputs = form.querySelectorAll('.input');
     const values = Array.from(inputs).map(input => input.value);
-    if(values.some(v => v.length == 0)) {return}
+
+    // alerting if any of the values are empty
+    if(values.some(v => v.length == 0)) {
+        window.alert('Please fill in all the fields');
+        return
+    }
     
-    // Save the values to local storage in an array
+    // creating an object from the values
+    const obj = {
+        userName: values[0],
+        title: values[1],
+        content: values[2]
+    }
+
+    // saving the object to local storage
     let data = localStorage.getItem('blogstom');
     if (data) {
         data = JSON.parse(data);
-        data.push(values);
+        data.push(obj);
     } else {
-        data = [values];
+        data = [obj];
     }
     localStorage.setItem('blogstom', JSON.stringify(data));
 });
 
+// Selector function
 function S(selector) {
     return document.querySelectorAll(selector);
 }
