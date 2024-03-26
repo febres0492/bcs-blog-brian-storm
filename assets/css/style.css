@@ -14,6 +14,7 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    min-height: 100vh;
 }
 
 *{
@@ -22,10 +23,6 @@ body {
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-}
 
 /* style for responsivenes ---------------------------------------------------- */
 
@@ -47,19 +44,24 @@ body{
     flex-wrap: wrap;
     gap: var(--gap);
     flex: 1;
-    padding: 0 10px;
     width: 100%;
 }
 
 .col-md-6{
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: calc(50% - var(--row-gap));
 }
 
 @media screen and (max-width: 768px){
     .col-md-6{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .mb-sm {
+        margin-bottom: 20px;
+    }
+    .h-sm {
+        max-height: 300px;
     }
 }
 
@@ -94,7 +96,8 @@ body{
 }
 
 
-/* other classes ------------------------------------------------------------- */
+/* general style ---------------------------------------------------------------- */
+
 .d-none{
     display: none !important;
 }
@@ -102,7 +105,18 @@ body{
     margin-right: auto;
 }
 
-/* global style --------------------------------------------------------------- */
+[style*=--p\:] { padding: calc(0.25em * var(--p)) }
+[style*=--px\:] { padding-left: calc(0.25em * var(--px)); padding-right: calc(0.25em * var(--px)) }
+[style*=--py\:] { padding-top: calc(0.25em * var(--py)); padding-bottom: calc(0.25em * var(--py)) }
+[style*=--pt\:] { padding-top: calc(0.25em * var(--pt)) }
+[style*=--pb\:] { padding-bottom: calc(0.25em * var(--pb)) }
+[style*=--pl\:] { padding-left: calc(0.25em * var(--pl)) }
+[style*=--pr\:] { padding-right: calc(0.25em * var(--pr)) }
+
+[style*=--gap\:] { gap: calc(0.25em * var(--gap)) }
+
+
+/* global style ----------------------------------------------------------------- */
 
 a {
     text-decoration: none;
@@ -116,8 +130,9 @@ button {
 }
 
 img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 .btn {
@@ -136,6 +151,12 @@ img{
 }
 .bdr{
     border: 1px solid red;
+}
+
+.box{
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 5px;
 }
 
 /* header --------------------------------------------------------------------- */
