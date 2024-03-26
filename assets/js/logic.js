@@ -1,13 +1,10 @@
 
-// This file contains the logic for the blog page
-S('button[type="submit"]')[0].addEventListener('click', (ev) => {
-
-    // selecting the form
-    const form = S('form')[0];
+// this file contains the logic for the blog page
+S('button[type="submit"]')[0].addEventListener('click', () => {
     
-    // Getting values from the inputs
-    const inputs = form.querySelectorAll('.input');
-    const values = Array.from(inputs).map(input => input.value);
+    // getting values from the inputs
+    const inputs = S('form')[0].querySelectorAll('.input');
+    const values = [...inputs].map(input => input.value);
 
     // alerting if any of the values are empty
     if(values.some(v => v.length == 0)) {
@@ -33,7 +30,7 @@ S('button[type="submit"]')[0].addEventListener('click', (ev) => {
     localStorage.setItem('blogstom', JSON.stringify(data));
 });
 
-// Selector function
+// selector function
 function S(selector) {
     return document.querySelectorAll(selector);
 }

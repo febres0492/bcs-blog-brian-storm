@@ -37,7 +37,7 @@ function showBlogs() {
 
         S('#blogContainer')[0].innerHTML += `
             <div class="blog df flex-column">
-                <h1 class="blog-title">${title} ${i}</h1>
+                <h1 class="blog-title">${title}</h1>
                 <hr>
                 <p class="blog-message">${content}</p>
                 <p>Posted by: ${userName}</p>
