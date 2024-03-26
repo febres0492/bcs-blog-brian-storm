@@ -37,7 +37,10 @@ function showBlogs() {
 
         S('#blogContainer')[0].innerHTML += `
             <div class="blog df flex-column">
-                <h1 class="blog-title">${title}</h1>
+                <div class="df jcsb">
+                    <h1 class="blog-title">${title} ${i}</h1>
+                    <button class="delete-btn" onclick="deleteBlog(${i})">Delete</button>
+                </div>
                 <hr>
                 <p class="blog-message">${content}</p>
                 <p>Posted by: ${userName}</p>
@@ -53,6 +56,14 @@ function showNoPostsMessage() {
             <p>No blogs poasted yet</p>
         </div>
     `;
+}
+
+// this function deletes a blog
+function deleteBlog(i) {
+    let blogs = JSON.parse(localStorage.getItem('blogstom'));
+    blogs.splice(i, 1);
+    localStorage.setItem('blogstom', JSON.stringify(blogs));
+    showBlogs();
 }
 
 // this function capitalize the first letter of a string
