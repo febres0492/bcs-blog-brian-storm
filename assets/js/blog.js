@@ -16,9 +16,9 @@ function S(selector) {
 // This function displays the blogs in the container
 function showBlogs() {
 
-    // change the innerHTML of .test to running
-    S('.test')[0].innerHTML = 'running'
+    
 
+    // change the innerHTML of .test to running
     let blogs = [];
     if (localStorage.getItem('blogstom')) {
         blogs = JSON.parse(localStorage.getItem('blogstom'));

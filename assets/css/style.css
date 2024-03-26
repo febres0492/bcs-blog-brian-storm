@@ -168,6 +168,9 @@ header{
     padding: 15px;
 }
 
+.input {
+    color: var(--text-color);
+}
 
 
 
