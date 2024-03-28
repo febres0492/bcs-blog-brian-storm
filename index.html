@@ -10,9 +10,9 @@
 <body class="df flex-column ">
 
     <!-- header -->
-    <header>
+    <header class="shadow">
         <nav class="col">
-            <h3 class="mr-auto">My First Blog</h3>
+            <h2 class="mr-auto">My First Blog</h2>
             <a class="btn"  href="./blog.html">View Blogs</a>
             <button class="theme-toggle btn">Dark theme</button>
         </nav>
@@ -20,19 +20,19 @@
 
     <!-- form section -->
     <section class="df fg">
-        <div class="container fg" style="--px:16;">
+        <div class="container fg" >
             <div class="row box jcsb" style="--row-gap:10px; ">
 
                 <!-- image column -->
-                <div class="col-md-6 mb-sm" >
-                    <img class="h-sm" src="https://source.unsplash.com/400x300" alt="Random Image">
+                <div class="col-md-6 cus-h mb-sm" >
+                    <img src="https://source.unsplash.com/400x300" alt="Random Image">
                 </div>
 
                 <!-- form column -->
                 <div class="col-md-6 flex-column">
-                    <div class="box">
+                    <div class="box shadow">
                         <form class="df flex-column" action="blog.html" method="get">
-                            <h1>What's on your mind?</h1>
+                            <h2 class="form-title">What's on your mind?</h2>
                             <label for="username">Username</label>
                             <input class="input" type="text" name="username"  required >
                             <label for="title">Title</label>
@@ -49,7 +49,7 @@
 
     <!-- footer -->
     <footer>
-        <h2>footer</h2>
+        <h2>Links</h2>
         <a href="https://github.com/febres0492/bcs-blog-brian-storm">github repo</a>
     </footer>
     <script src="./assets/js/logic.js"></script>

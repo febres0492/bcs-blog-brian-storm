@@ -3,11 +3,17 @@
     --background-color: #fff;
     --text-color: #000;
     --gap:10px;
+    --max-fvw: 6rem;
+    --color-1: hsl(208, 42%, 85%);
+    --color-3: hsl(208, 88%, 46%);
+
 }
 
 /* dark theme */
 .dark-theme {
-    --background-color: #333;
+    --background-color: #30383f;
+    --color-1: hsl(208, 22%, 35%);
+    --color-2: #1e2d38;
     --text-color: #fff;
 }
 
@@ -16,6 +22,7 @@ body {
     color: var(--text-color);
     min-height: 100vh;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 *{
@@ -50,19 +57,13 @@ body {
 
 .col-md-6{
     flex: 0 0 50%;
-    max-width: calc(50% - var(--row-gap));
+    max-width: calc(50% - var(--row-gap, 0));
 }
 
 @media screen and (max-width: 768px){
     .col-md-6{
         flex: 0 0 100%;
         max-width: 100%;
-    }
-    .mb-sm {
-        margin-bottom: 20px;
-    }
-    .h-sm {
-        max-height: 300px;
     }
 }
 
@@ -74,47 +75,27 @@ body {
     flex-wrap: wrap;
     gap: var(--gap)
 }
-.jcc{
-    justify-content: center;
-}
-.jcsb{
-    justify-content: space-between;
-}
-.aic{
-    align-items: center;
-}
-.nowrap{
-    flex-wrap: nowrap;
-}
-.flex-column{
-    flex-direction: column;
-}
-.tac{
-    text-align: center;
-}
-.fg{
-    flex-grow: 1;
-}
+.jcc{ justify-content: center; }
+.jcsb{ justify-content: space-between; }
+.aic{ align-items: center; }
+.nowrap{ flex-wrap: nowrap; }
+.flex-column{ flex-direction: column; }
+.tac{ text-align: center; }
+.fg{ flex-grow: 1; }
 
 
 /* general style ---------------------------------------------------------------- */
 
-.d-none{
-    display: none !important;
-}
-.mr-auto{
-    margin-right: auto;
-}
+.d-none { display: none !important; }
+.mr-auto{ margin-right: auto; }
 
-[style*=--p\:] { padding: calc(0.25em * var(--p)) }
-[style*=--px\:] { padding-left: calc(0.25em * var(--px)); padding-right: calc(0.25em * var(--px)) }
-[style*=--py\:] { padding-top: calc(0.25em * var(--py)); padding-bottom: calc(0.25em * var(--py)) }
-[style*=--pt\:] { padding-top: calc(0.25em * var(--pt)) }
-[style*=--pb\:] { padding-bottom: calc(0.25em * var(--pb)) }
-[style*=--pl\:] { padding-left: calc(0.25em * var(--pl)) }
-[style*=--pr\:] { padding-right: calc(0.25em * var(--pr)) }
-
-[style*=--gap\:] { gap: calc(0.25em * var(--gap)) }
+h1,.h1 {font-size:calc(2rem + min(var(--max-fvw), calc(var(--fvw, 0) * 1vw)));}
+h2,.h2 {font-size:calc(1.5rem + min(var(--max-fvw), calc(var(--fvw, 0) * 1vw)));}
+h3,.h3 {font-size:calc(1.17rem + min(var(--max-fvw), calc(var(--fvw, 0) * 1vw)));}
+h4,.h4 {font-size:calc(1rem + min(var(--max-fvw), calc(var(--fvw, 0) * 1vw)));}
+h5,.h5 {font-size:calc(.83rem + min(var(--max-fvw), calc(var(--fvw, 0) * 1vw)));}
+h6,.h6 {font-size:calc(.67rem + min(var(--max-fvw), calc(var(--fvw, 0) * 1vw)));}
+p, span, a, button, li {font-size:calc( 1rem + min(var(--max-fvw), calc(var(--fvw, 0) * 1vw)));}
 
 
 /* global style ----------------------------------------------------------------- */
@@ -132,71 +113,64 @@ button {
 
 img{
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 5px;
 }
 
 .btn {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--color-3);
+    border: 1px solid var(--text-color);
+    color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 14px;
+    font-weight: 700;
 }
 
-.bdb{
-    border: 1px solid black;
-}
-.bdr{
-    border: 1px solid red;
-}
+.bdb{ border: 1px solid black; }
+.bdr{ border: 1px solid red; }
 
 .box{
-    padding: 20px;
-    border: 2px solid #000000;
+    padding: calc(var(--row-gap) * 2);
     border-radius: 5px;
+}
+
+.outline { border: 1px solid #00000062; }
+
+.shadow {
+    -webkit-box-shadow: -1px 6px 20px -6px rgba(0,0,0,0.46);
+    -moz-box-shadow: -1px 6px 20px -6px rgba(0,0,0,0.46);
+    box-shadow: -1px 6px 20px -6px rgba(0,0,0,0.46);
 }
 
 /* header --------------------------------------------------------------------- */
 
 header{
     padding: 10px 0;
-    border: 2px solid #000000;
     padding: 15px;
+    background-color: var(--color-1);
 }
 
-.input {
-    color: var(--text-color);
+.input { color: var(--text-color); }
+
+.form-title { --fvw:.8; }
+
+/* .cus-h { max-height: 391px; } */
+
+@media screen and (max-width: 768px){
+    .mb-sm { margin-bottom: 20px; }
+    /* .cus-h { height: 273px; } */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* footer --------------------------------------------------------------------- */
 
 footer{
     padding: 10px 0;
-    border: 2px solid #000000;
     padding: 15px;
+    background-color: var(--color-1);
 }
 

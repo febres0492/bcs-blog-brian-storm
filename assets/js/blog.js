@@ -16,7 +16,7 @@ function S(selector) {
 // This function displays the blogs in the container
 function showBlogs() {
 
-    
+
 
     // change the innerHTML of .test to running
     let blogs = [];
@@ -59,7 +59,6 @@ function showBlogs() {
 
 // this function shows a message when there are no posts
 function showNoPostsMessage() {
-    S('.test')[0].innerHTML = 'deleting'
     S('#blogContainer')[0].innerHTML = `
         <div class="blog df flex-column bdb">
             <p>No blogs poasted yet</p>
@@ -77,10 +76,12 @@ function deleteBlog(i) {
 
 // this function capitalize the first letter of a string
 function capFirst(str) {
+    if (!str) return str;
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 // this function capitalze the first letter of all words in a string
 function capAll(str) {
-    return str.split(' ').map(capFirst).join(' ');
+    if (!str) return str;
+    return str.split(' ').map(capFirst).join(' ') || str;
 }

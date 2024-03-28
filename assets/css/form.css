@@ -14,7 +14,7 @@ form title {
 form .input {
     font-size: inherit;
     padding: 5px;
-    background-color: rgb(0,0,0,.15);
+    background-color: var(--color-1);
     border: none;
     border-radius: 5px;
 }
