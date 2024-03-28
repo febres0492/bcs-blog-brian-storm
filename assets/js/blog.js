@@ -27,7 +27,6 @@ function showBlogs() {
     // if there are no blogs
     if(blogs.length == 0) {
         showNoPostsMessage()
-        S('#deleteAllBtn')[0].classList.add('d-none');
         return
     }
 
@@ -59,6 +58,7 @@ function showBlogs() {
 
 // this function shows a message when there are no posts
 function showNoPostsMessage() {
+    S('#deleteAllBtn')[0].classList.add('d-none');
     S('#blogContainer')[0].innerHTML = `
         <div class="blog df flex-column bdb">
             <p>No blogs poasted yet</p>
