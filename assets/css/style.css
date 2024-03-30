@@ -165,9 +165,11 @@ header{
 
 @media screen and (max-width: 768px){
     .mb-sm { margin-bottom: 20px; }
-    /* .cus-h { height: 273px; } */
 }
 
+.pt {
+    padding-top: 20px;
+}
 
 /* footer --------------------------------------------------------------------- */
 
@@ -175,5 +177,17 @@ footer{
     padding: 10px 0;
     padding: 15px;
     background-color: var(--color-1);
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
 }
 
