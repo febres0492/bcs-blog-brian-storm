@@ -123,7 +123,7 @@ img{
     display: inline-block;
     padding: 8px 16px;
     background-color: var(--color-3);
-    border: 1px solid var(--text-color);
+    border: 1px solid white;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -144,6 +144,11 @@ img{
     -webkit-box-shadow: -1px 6px 20px -6px rgba(0,0,0,0.46);
     -moz-box-shadow: -1px 6px 20px -6px rgba(0,0,0,0.46);
     box-shadow: -1px 6px 20px -6px rgba(0,0,0,0.46);
+}
+.top-shadow {
+    -webkit-box-shadow: -1px -6px 10px -6px rgba(0,0,0,0.46);
+    -moz-box-shadow: -1px -6px 10px -6px rgba(0,0,0,0.46);
+    box-shadow: -1px -6px 10px -6px rgba(0,0,0,0.46);
 }
 
 /* header --------------------------------------------------------------------- */
