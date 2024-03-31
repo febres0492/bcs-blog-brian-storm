@@ -1,8 +1,11 @@
 # BCS-blog-brian-storm
 
-Welcome to our two-page blog site! This simple yet powerful platform allows you to create and view blog posts seamlessly. 
+Welcome to my two-page blog site!  
+This allows you to create and view blog posts. 
 
-![Preview](./my-blog.png)
+![Preview](./my-blog.png) 
+
+Page live at: https://febres0492.github.io/bcs-blog-brian-storm/index.html
 
 ## Features
 
