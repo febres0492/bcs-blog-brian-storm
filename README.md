@@ -2,7 +2,7 @@
 
 Welcome to our two-page blog site! This simple yet powerful platform allows you to create and view blog posts seamlessly. 
 
-![Preview](preview_image_link_here)
+![Preview](./my-blog.png)
 
 ## Features
 
