@@ -16,8 +16,6 @@ function S(selector) {
 // This function displays the blogs in the container
 function showBlogs() {
 
-
-
     // change the innerHTML of .test to running
     let blogs = [];
     if (localStorage.getItem('blogstom')) {
@@ -45,7 +43,7 @@ function showBlogs() {
         S('#blogContainer')[0].innerHTML += `
             <div class="blog df flex-column">
                 <div class="df jcsb">
-                    <h1 class="blog-title">${title} ${i}</h1>
+                    <h3 class="blog-title">${title} ${i}</h3>
                     <button class="btn" onclick="deleteBlog(${i})">Delete</button>
                 </div>
                 <hr>

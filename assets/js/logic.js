@@ -10,7 +10,6 @@ if (theme && theme === 'dark') {
     S('.theme-toggle')[0].textContent = 'Light';
 }
 
-
 // toggling the theme
 S('.theme-toggle')[0].addEventListener('click', (ev) => {
     theme = localStorage.getItem('blog-theme');
